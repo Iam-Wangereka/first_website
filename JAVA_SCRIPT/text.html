@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        document.write("<p>" + Date() + "</p>");
+    </script>
+    <script type="text/javascript" src="external.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var a,b,c,d;
+        a=10;
+        b=prompt("enter your name", "SAMMY");
+        c=parseInt(prompt("enter the value of c","5"));
+        d=a+c;
+        document.write("<br>" + "sum of a and c= " + d);
+        let e=d+b;
+        document.write("<br>" + "sum of d and b= " + e);
+    </script>
+    <script>
+        function show_alert()
+        {
+            alert("Exams are approaching");
+        }
+        document.write("<br>");
+    </script>
+    <script>
+        document.write("<h1>" + "working with javascript" + "</h1>");
+        
+        function addNumbers(num1, num2) {
+    return num1 + num2;
+  }
+  
+  let number1 = parseFloat(prompt("Enter first number: "));
+  let number2 = parseFloat(prompt("Enter second number: "));
+  
+  let Sum = addNumbers(number1, number2);
+  
+  console.log("<br>" + "The Sum of " + number1 + " and " + number2 + " is " + Sum + "." + "<br>");
+    </script>
+    <button type="button" onclick=show_alert()> click me</button>
+</body>
+</html>
