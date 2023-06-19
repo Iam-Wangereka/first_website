@@ -6,7 +6,7 @@
 </head>
 <body>
     <header>
-        <img src="/images/logo.png" alt="logo">
+        <img src="images/logo.png" alt="logo">
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -23,33 +23,52 @@
             <p>Feel Free To Contact Us</p>
         </main>
         <div class="container">
-            <form action="Contact_Us.html">
+            <form name="contactForm" action="Contact_Us.html"  onsubmit="submitForm()">
           
               <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your First name.." required>
+              <input type="text" id="fname" name="firstname" placeholder="Your First name.." >
           
               <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name.." >
           
               <label for="email">Email</label>
-              <input type="email" id="email" name="Email" placeholder="Email.." required>
+              <input type="email" id="email" name="Email" placeholder="Email.." >
           
               <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" ></textarea>
           
-              <button type="submit" onclick= submitForm() >Submit</button>
+              <button type="submit">Submit</button>
             </form>
             <script>                
-                   function submitForm()
-                {
-                    alert("Form Submitted Successfully");
+                   function submitForm(){
+                    let fname = document.forms["contactForm"]["firstname"].value;
+                    let lname = document.forms["contactForm"]["lastname"].value;
+                    let email = document.forms["contactForm"]["Email"].value;
+                    let subject = document.forms["contactForm"]["subject"].value;
+
+                    if (fname==""){
+                        alert("please provide your first name");
+                        return false;
+                    }
+                    else if(lname==""){
+                        alert("please provide your last name");
+                        return false;
+                    }
+                    else if(email==""){
+                        alert("please provide your email");
+                        return false;
+                    }
+                    else{
+                        alert("Form Submitted Successfully");
+                    }
+                    
                 }
                 document.write("<br>");
                 </script>
           </div>
           <div class="social-icons">
-            <a href="https://web.facebook.com/profile.php?id=100070567733286"><img src="/images/facebook.png"></a>
-            <a href="https://www.instagram.com/c.ustom_gifts/"><img src="/images/instagram.png"></a>
+            <a href="https://web.facebook.com/profile.php?id=100070567733286"><img src="images/facebook.png"></a>
+            <a href="https://www.instagram.com/c.ustom_gifts/"><img src="images/instagram.png"></a>
           </div>
         <div class="footer">
             <marquee behavior="" direction="right">
